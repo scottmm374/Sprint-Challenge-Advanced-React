@@ -1,9 +1,9 @@
-import React, {Component } from 'react';
-import axios from 'axios';
-import PlayerCard from './components/PlayerCard';
-import Header from './components/Header'
+import React, { Component } from "react";
+import axios from "axios";
+import PlayerCard from "./components/PlayerCard";
+import Header from "./components/Header";
 
-import './App.css';
+import "./App.css";
 
 class App extends Component {
   constructor() {
@@ -15,29 +15,27 @@ class App extends Component {
 
   componentDidMount() {
     axios
-      .get('http://localhost:5000/api/players')
-      .then(res => this.setState({worldCupData: res.data}))
-      .catch(err => console.log(err))
-  };
+      .get("http://localhost:5000/api/players")
+      .then(res => this.setState({ worldCupData: res.data }))
+      .catch(err => console.log(err));
+  }
 
   render() {
-    console.log("data", this.state)
+    console.log("data", this.state);
     return (
-     
       <div>
-         <Header />
+        <Header />
         {this.state.worldCupData.map(player => (
-          <PlayerCard 
+          <PlayerCard
             key={player.id}
             name={player.name}
             country={player.country}
-            searches={player.searches} />
+            searches={player.searches}
+          />
         ))}
       </div>
     );
-
   }
- 
 }
 
 export default App;

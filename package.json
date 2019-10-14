@@ -12,9 +12,7 @@
     "reactstrap": "^8.0.1"
   },
   "devDependencies": {
-    "jest-dom": "^4.0.0",
-    "nodemon": "^1.17.2",
-    "react-testing-library": "^8.0.1"
+    "nodemon": "^1.17.2"
   },
   "scripts": {
     "start": "nodemon server.js"

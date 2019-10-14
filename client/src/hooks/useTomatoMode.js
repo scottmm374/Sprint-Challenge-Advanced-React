@@ -1,21 +1,17 @@
-import { useLocalStorage } from './useLocalStorage'
-import { useEffect } from 'react'
-
+import { useLocalStorage } from "./useLocalStorage";
+import { useEffect } from "react";
 
 export function useTomatoMode() {
-    const [value, setValue] = useLocalStorage("key", false)
+  const [value, setValue] = useLocalStorage("key", false);
 
-    useEffect(() => {
-        const mode = document.querySelector('h1')
-        if (value) {
+  useEffect(() => {
+    const mode = document.querySelector("h1");
+    if (value) {
+      mode.classList.add("tomato");
+    } else {
+      mode.classList.remove("tomato");
+    }
+  }, [value]);
 
-            mode.classList.add('tomato')
-        } else {
-            mode.classList.remove('tomato')
-        }
-
-
-    }, [value])
-
-    return [value, setValue]
+  return [value, setValue];
 }

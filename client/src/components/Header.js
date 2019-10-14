@@ -1,7 +1,5 @@
-import React from 'react'
-import { useTomatoMode } from '../hooks/useTomatoMode';
-
-
+import React from "react";
+import { useTomatoMode } from "../hooks/useTomatoMode";
 
 const Header = () => {
   const [tomatoMode, setTomatoMode] = useTomatoMode(false);
@@ -13,10 +11,12 @@ const Header = () => {
     <nav className="header">
       <h1>Women's World Cup</h1>
       <div>
-      <button 
+        <button
           onClick={toggleMode}
-          className={tomatoMode ? 'toggle toggled' : 'null'} >Click Me!</button>
-       
+          className={tomatoMode ? "toggle toggled" : "null"}
+        >
+          Click Me!
+        </button>
       </div>
     </nav>
   );

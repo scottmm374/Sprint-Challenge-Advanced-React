@@ -8,9 +8,7 @@ import App from './App';
 afterEach(rtl.cleanup);
 
 
-
-
 test('name is found', () => {
   const {getByText} = rtl.render(<App />);
-  getByText('Name')
+  getByText('Country')
 });
