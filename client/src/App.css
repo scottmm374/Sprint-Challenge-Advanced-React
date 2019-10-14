@@ -31,3 +31,17 @@
     transform: rotate(360deg);
   }
 }
+
+.card{
+  text-align: center;
+}
+
+.tomato {
+  color: tomato;
+  font-family: 'Fascinate Inline', cursive;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px
+}
