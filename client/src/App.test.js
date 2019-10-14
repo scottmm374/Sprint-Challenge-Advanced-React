@@ -17,7 +17,7 @@ test("Find country", () => {
  wrapper.queryByText(/country/i)
 });
 
-test("Find country", () => {
+test("Find searches", () => {
   const wrapper = rtl.render(<App />);
  wrapper.queryByText(/searches/i)
 });
