@@ -1,6 +1,7 @@
 import React, {Component } from 'react';
 import axios from 'axios';
 import PlayerCard from './components/PlayerCard';
+import Header from './components/Header'
 
 import './App.css';
 
@@ -22,7 +23,9 @@ class App extends Component {
   render() {
     console.log("data", this.state)
     return (
+     
       <div>
+         <Header />
         {this.state.worldCupData.map(player => (
           <PlayerCard 
             key={player.id}
@@ -30,9 +33,6 @@ class App extends Component {
             country={player.country}
             searches={player.searches} />
         ))}
-        
-         
-       
       </div>
     );
 
